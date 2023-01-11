@@ -1,6 +1,31 @@
 body {
   background-color: bisque;
+  font-family: sans-serif;
+}
+
+.game-nav {
+  width: 70%;
+  height: 60px;
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.459);
+}
+.game-link {
+  padding: 14px;
+  color: rgb(252, 252, 252);
+  text-decoration: none;
+  font-size: 20px;
+  transition: all 250ms ease-in-out;
+  border-radius: 10px;
+}
+.game-link:hover {
+  border-radius: 10px;
+  background-color: aliceblue;
+  color: #1a1a1a;
 }
 
 .field {
@@ -12,13 +37,10 @@ body {
   margin: 50px auto;
 
   border-radius: 10px;
-  border: 5px solid #ffc039;
-  background-color: #fa812b;
+  border: 10px solid #ce8d01;
+  background: linear-gradient(-120deg, #fd6b03, #ffa600, #faf603);
 }
-
 .cell {
-  transition: all 400ms ease-in-out;
-
   cursor: pointer;
 
   box-sizing: border-box;
@@ -30,43 +52,39 @@ body {
   justify-content: center;
   align-items: center;
 
-  border: 3px solid tomato;
   border-radius: 20px;
-  font-size: 50px;
-
-  height: 25%;
-  width: 25%;
-
-  background-color: pink;
-}
-
-.button {
-  width: 190px;
-  height: 55px;
-  display: flex;
-  text-align: center;
-  align-items: center;
-  justify-content: space-between;
-  border: 3px solid white;
-  border-radius: 0;
-  cursor: pointer;
-  padding: 10px;
-  font-size: 16px;
+  font-size: 85px;
   color: white;
-  background-color: #425b78;
-  transition: all 250ms ease-in-out;
-}
-.button:hover {
-  background-color: #1b263b;
-}
 
-.svg {
-  fill: #fff;
-  padding: 10px;
+  height: 24%;
+  width: 24%;
+
+  box-shadow: rgba(6, 24, 44, 0.705) 0px 0px 0px 2px,
+    rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.329) 0px 1px 0px inset;
+  background: linear-gradient(
+    27deg,
+    rgb(255, 242, 168) 0%,
+    rgb(252, 199, 124) 13%,
+    rgb(253, 179, 69) 39%,
+    rgba(245, 146, 1, 1) 94%
+  );
+  transition: all 400ms ease-in-out;
+}
+.in-cell {
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
 
-  transition: all 250ms ease-in-out;
-}
-.button:hover .svg {
-  background-color: #425b78;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: radial-gradient(
+    circle,
+    rgba(252, 178, 0, 1) 18%,
+    rgba(255, 184, 0, 1) 43%,
+    rgba(255, 105, 17, 1) 71%,
+    rgba(255, 255, 255, 0.8183648459383753) 99%
+  );
 }

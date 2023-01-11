@@ -1,11 +1,5 @@
-h1 {
-  text-align: center;
-  margin-bottom: 50px;
-}
-h1 span {
-  font-weight: 900;
-}
 body {
+  background-color: azure;
   font-family: sans-serif;
 }
 
@@ -18,7 +12,7 @@ body {
   align-items: center;
   justify-content: center;
   border-radius: 5px;
-  background-color: rgba(0, 0, 0, 0.459);
+  background-color: black;
 }
 .game-link {
   padding: 14px;
@@ -31,21 +25,8 @@ body {
 .game-link:hover {
   border-radius: 10px;
   background-color: aliceblue;
-  color: #1a1a1a;
+  color: #4e4e4e;
 }
-
-.container {
-  width: 500px;
-  margin: 0 auto;
-  display: grid;
-  gap: 50px;
-  align-items: flex-start;
-  grid-template-areas:
-    "game score"
-    "game next";
-}
-.game-area {
-  border: 2px solid #000;
-  border-width: 0 2px 3px 2px;
-  display: block;
+.game-link:not(:last-child) {
+  margin-right: 10px;
 }
