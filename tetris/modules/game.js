@@ -1,6 +1,5 @@
 import { tetraminoes } from "./tetraminoes.js";
-
-import { ROWS, COLUMNS } from "../script.js";
+import { ROWS, COLUMNS } from "../game.js";
 
 export class Game {
   score = 0;

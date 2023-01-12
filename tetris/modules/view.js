@@ -1,11 +1,11 @@
-import { SIZE_BLOCK, COLUMNS, ROWS } from "../script.js";
-import { tetraminoes } from "./tetraminoes.js";
+import { SIZE_BLOCK, COLUMNS, ROWS } from "../game.js";
 
 export class View {
   constructor(container) {
     this.container = container;
     this.preview();
   }
+  canvas = document.createElement("canvas");
 
   colorsTetramino = {
     J: "DeepPink",
@@ -16,8 +16,6 @@ export class View {
     T: "DarkSlateBlue",
     S: "LimeGreen",
   };
-
-  canvas = document.createElement("canvas");
 
   preview() {
     this.container.textContent = "";
@@ -33,7 +31,6 @@ export class View {
 
     this.container.append(preview);
   }
-
   init() {
     this.container.textContent = "";
     this.canvas.style.gridArea = "game";
@@ -42,7 +39,6 @@ export class View {
     this.canvas.width = SIZE_BLOCK * COLUMNS;
     this.canvas.height = SIZE_BLOCK * ROWS;
   }
-
   createBlockScore() {
     const scoreBlock = document.createElement("div");
     scoreBlock.style.cssText = `
@@ -68,7 +64,6 @@ export class View {
       recordElem.textContent = `record: ${record}`;
     };
   }
-
   createBlockNextTetramino() {
     const tetraminoBlock = document.createElement("div");
     tetraminoBlock.style.cssText = `
@@ -118,7 +113,6 @@ export class View {
       }
     };
   }
-
   showArea(area) {
     const context = this.canvas.getContext("2d");
 
